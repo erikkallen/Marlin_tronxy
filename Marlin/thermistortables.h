@@ -209,6 +209,46 @@ const short temptable_5[][2] PROGMEM = {
 };
 #endif
 
+#if (THERMISTORHEATER_0 == 502) || (THERMISTORHEATER_1 == 502) || (THERMISTORHEATER_2 == 502) || (THERMISTORBED == 502) //100k ParCan thermistor (104GT-2)
+const short temptable_502[][2] PROGMEM = {
+// ATC Semitec 104GT-2 (Used in ParCan)
+// Updated by erikkallen. measured
+// Calculated using 4.7kohm pullup, voltage divider math, and manufacturer provided temp/resistance
+   {1*OVERSAMPLENR, 713},
+   {17*OVERSAMPLENR, 300}, //top rating 300C
+   {20*OVERSAMPLENR, 290},
+   {23*OVERSAMPLENR, 280},
+   {27*OVERSAMPLENR, 270},
+   {31*OVERSAMPLENR, 260},
+   {38*OVERSAMPLENR, 250},
+   {46*OVERSAMPLENR, 240},
+   {55*OVERSAMPLENR, 230},
+   {66*OVERSAMPLENR, 220},
+   {80*OVERSAMPLENR, 210},
+   {97*OVERSAMPLENR, 200},
+   {119*OVERSAMPLENR, 190},
+   {142*OVERSAMPLENR, 180},
+   {171*OVERSAMPLENR, 170},
+   {189*OVERSAMPLENR, 160},
+   {230*OVERSAMPLENR, 150},
+   {278*OVERSAMPLENR, 140},
+   {336*OVERSAMPLENR, 130},
+   {402*OVERSAMPLENR, 120},
+   {476*OVERSAMPLENR, 110},
+   {554*OVERSAMPLENR, 100},
+   {635*OVERSAMPLENR, 90},
+   {713*OVERSAMPLENR, 80},
+   {784*OVERSAMPLENR, 70},
+   {846*OVERSAMPLENR, 60},
+   {897*OVERSAMPLENR, 50},
+   {937*OVERSAMPLENR, 40},
+   {966*OVERSAMPLENR, 30},
+   {986*OVERSAMPLENR, 20},
+   {1000*OVERSAMPLENR, 10},
+   {1010*OVERSAMPLENR, 0}
+};
+#endif
+
 #if (THERMISTORHEATER_0 == 501) || (THERMISTORHEATER_1 == 501) || (THERMISTORHEATER_2 == 501) || (THERMISTORBED == 501) //100k ParCan thermistor (104GT-2)
 const short temptable_501[][2] PROGMEM = {
 //Adjust By Hally

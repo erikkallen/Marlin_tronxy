@@ -143,7 +143,7 @@
 // 147 is Pt100 with 4k7 pullup
 // 110 is Pt100 with 1k pullup (non standard)
 
-#define TEMP_SENSOR_0 		501
+#define TEMP_SENSOR_0 		502
 #define TEMP_SENSOR_1 		0
 #define TEMP_SENSOR_2 		0
 #define TEMP_SENSOR_BED 	501
@@ -198,9 +198,15 @@
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 // Ultimaker
-    #define  DEFAULT_Kp 		22.2
-    #define  DEFAULT_Ki 		1.08
-    #define  DEFAULT_Kd 		114
+  //  #define  DEFAULT_Kp 		22.2
+ //   #define  DEFAULT_Ki 		1.08
+  //  #define  DEFAULT_Kd 		114
+
+    // Tronxy
+    #define  DEFAULT_Kp     24.06
+    #define  DEFAULT_Ki     2.10
+    #define  DEFAULT_Kd     68.98
+
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
@@ -393,16 +399,16 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 
   // these are the offsets to the probe relative to the extruder tip (Hotend - Probe)
-  #define X_PROBE_OFFSET_FROM_EXTRUDER 		-21//-25
-  #define Y_PROBE_OFFSET_FROM_EXTRUDER 		-43//-29
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER 		0//-12.35
+  #define X_PROBE_OFFSET_FROM_EXTRUDER 		-25//-25
+  #define Y_PROBE_OFFSET_FROM_EXTRUDER 		-55//-29
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER 		-1.6//-12.35
 
   #define Z_RAISE_BEFORE_HOMING 			5       // (in mm) Raise Z before homing (G28) for Probe Clearance.
                                         			// Be sure you have this distance over your Z_MAX_POS in case
 
   #define XY_TRAVEL_SPEED 					6000         // X and Y axis travel speed between probes, in mm/min
 
-  #define Z_RAISE_BEFORE_PROBING 			5    //How much the extruder will be raised before traveling to the first probing point.
+  #define Z_RAISE_BEFORE_PROBING 			4    //How much the extruder will be raised before traveling to the first probing point.
   #define Z_RAISE_BETWEEN_PROBINGS 			2  //How much the extruder will be raised when traveling from between next probing points
 
 
@@ -444,7 +450,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define HOMING_FEEDRATE				{100*60, 100*60, 2*60, 0}  // set the homing speeds (mm/min)
 
 // default settings
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,	100, 400,90}  				// default steps per unit for P802
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,	100, 400,103}  				// default steps per unit for P802
 #define DEFAULT_MAX_FEEDRATE          {400, 400, 4, 50}    			// (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {3000,3000,1000,5000}    			// X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 #define DEFAULT_ACCELERATION          1000    							// X, Y, Z and E max acceleration in mm/s^2 for printing moves
